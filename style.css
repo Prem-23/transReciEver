@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Poppins:wght@100;200;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+    
+}
+*::-webkit-scrollbar{
+    width: 0;
+}
+/* Header */
+.header{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #262626;
+    border-bottom: 2.5px solid rgba(253, 0, 190, 0.6);
+}
+.headerContainer{
+    width: 95%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerUserSpace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerImgContainer{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #3D3D3D;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.headerImgContainer img{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+.headerUserSpace h4{
+    color: white;
+    margin-left: 10px;
+    font-weight: 300;
+}
+.headerContainer a{
+    color: #707070;
+    cursor: pointer;
+}
+.searchBox{
+    width: 100%;
+    padding: 10px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.searchInput{
+    width: 200px;
+    border: none;
+    outline: none;
+    background-color: #262626;
+    font-size: 12px;
+    padding: 6px 0;
+    color: #fff;
+    border-bottom: 1px solid #4b4a4a;
+}
+.searchInput:placeholder-shown{
+    font-size: 12px;
+    color: #707070;
+}
+.searchBox i{
+    color: #c0bebe;
+    margin-left: 13px;
+    cursor: pointer;
+}
+.headerContainer .toggle{
+    position: relative;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+    transition: .5s;
+    margin-left: 15px;
+}
+.headerContainer .toggle::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 1px;
+    background-color: #c0bebe;
+    transition: .5s;
+}
+.headerContainer .toggle::before{
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 1px;
+    background-color: #c0bebe;
+    transform: translateY(-7px);
+    transition: .5s;
+}
+.headerContainer .toggle.active::after{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 1px;
+    transform: rotate(135deg);
+    transition: .5s;
+}
+.headerContainer .toggle.active::before{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 1px;
+    transform: translateY(-7px);
+    transform: rotate(-135deg);
+    transition: .5s;
+}
+.headerToggleContainer{
+    width: 25%;
+    min-height: 94vh;
+    background-color: #262626;
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-right: 2px solid rgba(0, 151, 252, 0.6);
+    padding: 40px;
+    overflow: hidden;
+    transform: translateX(-400px);
+    z-index: 20000000000;
+}
+.headerToggleContainer a{
+    color: #c0bebe;
+    font-weight: 500;
+    border-bottom: 1px solid #707070;
+    padding: 8px 0;
+    cursor: pointer;
+}
+.headerToggleContainer a:hover{
+    color: #707070;
+}
+.headerToggleContainer.navActive{
+    transform: translateX(0px);
+    transition: .8s;
+}
+
+/* Section */
+.sectionOne{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #262626;
+    border-left: 2.5px solid rgba(172, 0, 252, 0.6);
+    border-right: 2.5px solid rgba(172, 0, 252, 0.6);
+    border-bottom: 4.5px solid rgba(231, 0, 252, 0.6);
+}
+.sectionOneContainer{
+    width: 100%;
+    min-height: 99.3vh;
+    display: flex;
+}
+.sectionContainers{
+    width: 100%;
+    display: flex;
+    min-height: 90vh;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.containers{
+    position: fixed;
+    width: 25%;
+    height: 91.8vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 10px 0;
+    border-right: 4px solid rgba(0, 151, 252, 0.6);
+    z-index: 99999;
+    transition: .5s;
+}
+.containers.hideOne{
+    transform: translateX(-400px);
+    transition: .5s;
+}
+.containerfluid{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #3d3d3d;
+}
+.containerfluid:hover{
+    background-color: #3D3D3D;
+}
+.containerOne{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.containerOne .sectionImgContainer{
+    position: relative;
+    width: 55px;
+    height: 45px;
+    background-color: #3D3D3D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.containerOne .sectionImgContainer.hide{
+    z-index: -1;
+    transition: 1s;
+}
+.containerOne .sectionImgContainer img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.containerOne h4{
+    color: #c0bebe;
+    margin-left: 14px;
+    width: 100%;
+}
+
+/* user's Name and Profile Picture */
+.chatContainerTwo{
+    width: 75%;
+    height: 55px;
+    border-bottom: 1px solid rgb(113, 9, 161);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 35px;
+    position: absolute;
+    right: 0;
+    z-index: 1000000;
+}
+.chatContainerTwo .chatImgContainer{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #4b4a4a;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.chatContainerTwo .chatImgContainer img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.chatContainerTwo h4{
+    color: #fff;
+    font-weight: 200;
+    margin-left: 15px;
+}
+
+/* chat */
+.chatContainer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 75%;
+    height: 85%;
+    overflow: hidden;
+}
+.chatContainerName{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* user's Message Section  */
+
+.chatContainerThree{
+    width: 94%;
+    margin: auto;
+    height: 86%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.senderContainer{
+    width: 40%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.sender{
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.sender p{
+    color: #fff;
+    font-weight: 500px;
+    text-align: right;
+    border: 1px solid #c0bebe;
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    font-size: 13px;
+    overflow-wrap: break-word;
+}
+
+/* Input Field */
+.chatContainerFour{
+    width: 100%;
+    height: 11%;
+}
+.msg{
+    width: 94%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.msgBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #c0bebe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 15px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.msgBox textarea{
+    width: 96%;
+    border: none;
+    outline: none;
+    background-color: #c0bebe;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.paperIcon{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid rgba(55, 0, 252, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.paperIcon i{
+    color: rgba(46, 0, 252, 0.6);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+/* addchat */
+.addChat{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 1000000;
+    backdrop-filter: blur(4px);
+    transition: .5s;
+    overflow: hidden;
+}
+.addChatContainer{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ececec;
+    overflow: hidden;
+}
+.addChatContainer .addChatBox{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addChatContainer .addChatBox h3{
+    cursor: pointer;
+}
+.credentialBox{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding: 30px 0;
+}
+.nameInputs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.credentialBox .nameInputs input{
+    border: none;
+    outline: none;
+    background-color: #ececec;
+    width: 100%;
+    padding: 6px 2px;
+    border-bottom: 2px solid rgba(0, 151, 252, 0.6);
+}
+.credentialBox .nameInputs span{
+    position: absolute;
+    left: 0;
+    font-size: 13px;
+    color: #707070;
+    padding: 0 2px;
+    transition: .5s;
+}
+.credentialBox .nameInputs span.move{
+    padding: 0 0;
+    top: 12px;
+    color: #262626;
+    font-weight: 900;
+    transition: .5s;
+}
+
+/* upload Box */
+.addChat{
+    display: none;
+}
+.upload{
+    width: 100%;
+    height: 55%;
+    padding: 20px 0;
+}
+.uploadBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #707070;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.uploadBox img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.uploadBox i{
+    font-size: 50px;
+    color: rgba(0, 151, 252, 0.6);
+}
+.uploadBox span{
+    font-size: 12px;
+}
+.upload input{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+.upload input::-webkit-file-upload-button{
+    display: none;
+}
+.upload h4{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.addChatContainer .submit{
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.addChatContainer .submit button{
+    border: none;
+    outline: none;
+    padding: 7px 25px;
+    background-color: #707070;
+    color: #ececec;
+    cursor: pointer;
+}
+
+/* Delete chat */
+.delChat{
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    top: 0;
+    z-index: 1000000;
+}
+.delChatContainer{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ececec;
+}
+.delChatContains{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.logo{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deletionInputs{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.deletionInputs input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(172, 0, 252, 0.6);
+    padding: 4px 2px;
+    text-transform: capitalize;
+}
+.btnDeletions{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.deletionInputs .btnDeletions button{
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    background: linear-gradient(450deg, rgba(253, 0, 190, 0.6), rgba(173, 0, 253, 0.6));
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
