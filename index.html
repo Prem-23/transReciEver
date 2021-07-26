@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/sectionOne.css">
+    <link rel="stylesheet" href="CSS/addchat.css">
     <title>TransReciEver</title>
 </head>
-<body onload = loadFirstUser()>
+<body onload="loadingDefault()">
     <header class="header">
         <div class="headerContainer">
             <div class="headerUserSpace">
                 <div class="headerImgContainer">
-                    <img src="images/johnny.jpg" />
+                    <img src="images/receiver.jpg" />
                 </div>
                 <h4>Karthi</h4>
             </div>
@@ -26,165 +28,203 @@
                 </div>
             </div>
         </div>
-        <div class="headerToggleContainer" id="headerToggle">
-            <a href="#" id="add">Add Chat</a>
-            <a href="#" id="del"> Delete Chat</a>
-        </div>
     </header>
-    <section class="sectionOne">
-        <div class="sectionOneContainer">
-            <div class="sectionContainers">
-                <div class="containers">
+    
+    <section class="sectionContainer">
+        <div class="sectionDivisionContainer">
+            <div class="chatSection"></div>
+            <div class="chatAndMsgSection">
+                <div class="chatAndMsgSectionContainer" >
 
-                    <!-- Create Contact -->
-                    <div class="containerfluid">
-                        <a href="#chat" class="containerOne">
-                            <div class="sectionImgContainer">
-                                <img src="images/steve.jpg" />
+                    <!-- start -->
+                    <div class="chatAndMsgSectionContains visible">
+
+                        <!-- Divider -->
+                        <div class="chatSectionContainer">
+                            <div class="chatPersonContainer">
+                                <div class="personImgContainer">
+                                    <img src="images/default.jpg" />
+                                </div>
+                                <h4>TransReciEver</h4>
                             </div>
-                            <h4>Karthi</h4>
-                        </a>
-                    </div>
-                    <div class="containerfluid">
-                        <a href="#chatTwo" class="containerOne">
-                            <div class="sectionImgContainer">
-                                <img src="images/Thor.jpg" />
+                        </div>
+                    
+                        <div class="msgSectionContainer">
+                            <div class="msgContainer">
+                                <div class="msgChat">
+                                    <header class="msgChatHeader">
+                                        <div class="personMsgContainer">
+                                            <div class="personImgMsgContainer">
+                                                <img src="" />
+                                            </div>
+                                            <h4></h4>
+                                        </div>
+                                    </header>
+                                    <div class="messagingSection">
+                                        <div class="messagingContainer">
+                                            <div class="senderContainer">
+                                                <div class="senderMsgContainer">
+                                                    <div class="sender">
+                                                        <p>Hello, Welcome to TransReciEver</p>    
+                                                        <p>This site is made by Me..</p> 
+                                                        <p>For more information about me ...</p>
+                                                        <p>checkOut in my Github.</p>
+                                                        <p>https://github.com/Prem-23/</p>
+                                                        <p>For more information About sit, then check out in readTransReciEver.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="messageInputSections">
+                                        <div class="msg">
+                                            <div class="msgBox">
+                                                <textarea class="inputField" placeholder="Enter your Text"></textarea>
+                                                <div class="paperIcon">
+                                                    <i class="fa fa-paper-plane sendPlane"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>Thanos</h4>
-                        </a>
-                    </div>
-                    <div class="containerfluid">
-                        <a href="#chatThree" class="containerOne">
-                            <div class="sectionImgContainer">
-                                <img src="images/mr.bean.jpg" />
-                            </div>
-                            <h4>Bean</h4>
-                        </a>
+                        </div>
+                    
                     </div>
                     
-                </div>
-                <div class="chatContainerTwo">
-                    <div class="chatImgContainer">
-                        <img class="userImage" src="" />
-                    </div>
-                    <h4 class="userName"></h4>
-                </div>
-                <div class="chatContainer">
-
-                    <!-- Create Chat Container -->
-                    <div class="chatContainerName" id="chat">
-                        <div class="chatContainerThree">
-                            <div class="senderContainer">
-                                <div class="sender">
-                                    <p>hey buddy</p>
+                    <div class="chatAndMsgSectionContains">
+                    
+                        <!-- Divider -->
+                        <div class="chatSectionContainer">
+                            <div class="chatPersonContainer">
+                                <div class="personImgContainer">
+                                    <img src="images/testing.jpg" />
                                 </div>
+                                <h4>Testing Chat1</h4>
                             </div>
                         </div>
-                        <div class="chatContainerFour">
-                            <div class="msg">
-                                <div class="msgBox">
-                                    <textarea class="inputField" cols="30" rows="1" placeholder="Enter your Text"></textarea>
-                                    <div class="paperIcon">
-                                        <i class="fa fa-paper-plane sendPlane"></i>
+                    
+                        <div class="msgSectionContainer">
+                            <div class="msgContainer">
+                                <div class="msgChat">
+                                    <header class="msgChatHeader">
+                                        <div class="personMsgContainer">
+                                            <div class="personImgMsgContainer">
+                                                <img src="" />
+                                            </div>
+                                            <h4></h4>
+                                        </div>
+                                    </header>
+                                    <div class="messagingSection">
+                                        <div class="messagingContainer">
+                                            <div class="senderContainer">
+                                                <div class="senderMsgContainer">
+                                                    <div class="sender">
+                                                        <p>Hi, This is Chat One</p>      
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="messageInputSections">
+                                        <div class="msg">
+                                            <div class="msgBox">
+                                                <textarea class="inputField" placeholder="Enter your Text"></textarea>
+                                                <div class="paperIcon">
+                                                    <i class="fa fa-paper-plane sendPlane"></i>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
 
-                    <div class="chatContainerName" id="chatTwo">
-                        <div class="chatContainerThree">
-                            <div class="senderContainer">
-                                <div class="sender">
-                                    <p>hey</p>
+                    <div class="chatAndMsgSectionContains">
+                    
+                        <!-- Divider -->
+                        <div class="chatSectionContainer">
+                            <div class="chatPersonContainer">
+                                <div class="personImgContainer">
+                                    <img src="images/testing.jpg" />
                                 </div>
+                                <h4>Testing Chat2</h4>
                             </div>
                         </div>
-                        <div class="chatContainerFour">
-                            <div class="msg">
-                                <div class="msgBox">
-                                    <textarea class="inputField" cols="30" rows="1" placeholder="Enter your Text"></textarea>
-                                    <div class="paperIcon">
-                                        <i class="fa fa-paper-plane sendPlane"></i>
+                    
+                        <div class="msgSectionContainer">
+                            <div class="msgContainer">
+                                <div class="msgChat">
+                                    <header class="msgChatHeader">
+                                        <div class="personMsgContainer">
+                                            <div class="personImgMsgContainer">
+                                                <img src="" />
+                                            </div>
+                                            <h4></h4>
+                                        </div>
+                                    </header>
+                                    <div class="messagingSection">
+                                        <div class="messagingContainer">
+                                            <div class="senderContainer">
+                                                <div class="senderMsgContainer">
+                                                    <div class="sender">
+                                                        <p>Hello, This is Chat Two</p>      
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="messageInputSections">
+                                        <div class="msg">
+                                            <div class="msgBox">
+                                                <textarea class="inputField" placeholder="Enter your Text"></textarea>
+                                                <div class="paperIcon">
+                                                    <i class="fa fa-paper-plane sendPlane"></i>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
-
-                    <div class="chatContainerName" id="chatThree">
-                        <div class="chatContainerThree">
-                            <div class="senderContainer">
-                                <div class="sender">
-                                    <p>hey hi</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chatContainerFour">
-                            <div class="msg">
-                                <div class="msgBox">
-                                    <textarea class="inputField" cols="30" rows="1" placeholder="Enter your Text"></textarea>
-                                    <div class="paperIcon">
-                                        <i class="fa fa-paper-plane sendPlane"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    <!-- stop -->
 
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="addChat" id="addChat">
-        <div class="addChatContainer">
-            <div class="addChatBox">
-                <h3>TransReciEver</h3>
-            </div>
-            <div class="credentialBox">
-                <div class="nameInputs">
-                    <input type="text" id="addInputs" required />
-                    <span>Name</span>
-                </div>
-                <div class="upload">
-                    <div class="uploadBox">
-                        <img  />
-                        <i class="fa fa-cloud-upload cloud" aria-hidden="true"></i>
-                        <span class="fileFormat">only support jpg, jpeg, png</span>
-                    </div>
-                    <input type="file" id="file" />
-                </div>
-            </div>
-            <div class="submit">
-                <button type="submit" class="addBtn">Add</button>
-                <button type="reset" class="closeBtn" id="cancelAdd">Cancel</button>
-            </div>
-        </div>
-    </section>
+    
+    <div class="headerToggleContainer" id="headerToggle">
+        <a href="#" id="addChats">Add Chat</a>
+    </div>
 
-    <section class="delChat" id="delChat">
-        <div class="delChatContainer">
-            <div class="delChatContains">
-                <div class="logo">
-                    <h4>TransReciEver</h4>
+    <section class="addChatContainer">
+        <div class="addChatBox">
+            <h3>TransReciEver</h3>
+            <i class="fa fa-close close-icon cancelBtn"></i>
+            <div class="addChatInputsContainer">
+                <div class="addChatImgContainer" onclick="imageload()">
+                    <img src="" />
+                    Click Here to chooseImage
+                    <input type="file" id="imageFile" hidden/>
                 </div>
-                <div class="deletionInputs">
-                    <input type="text" placeholder="Name" />
-                    <div class="btnDeletions">
-                        <button type="submit">Delete</button>
-                        <button class="btnCancel" type="reset">Cancel</button>
-                    </div>
-                </div>
+                <input type="text" id="NameOfChats" placeholder="Enter Name" />
+                <div class="require">Above feild is Mandatory</div>
+                <div class="tell">There Is No chat with that Name.</div>
+            </div>
+            <div class="addChatBtns">
+                <button class="addBtn">Add</button>
+                <button class="deleteBtnInList">Delete</button>
             </div>
         </div>
     </section>
     
     <script src="javaScript/navBar.js"></script>
     <script src="javaScript/script.js"></script>
-    <script src="javaScript/addChat.js"></script>
-    <script src="javaScript/main.js"></script>
 </body>
 </html>
