@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Poppins:wght@100;200;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+}
+.sectionContainer{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #262626;
+}
+.sectionDivisionContainer{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.chatSection{
+    width: 25%;
+    height: 100%;
+    border-right: 4px solid rgba(0, 89, 255, 0.5);
+    overflow: hidden;
+}
+.chatAndMsgSection{
+    width: 100%;
+    height: 92%;
+    position: absolute;
+    top: 50px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.chatAndMsgSectionContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+}
+.chatAndMsgSectionContainer.container{
+    display: none;
+    transition: .5s;
+}
+.chatAndMsgSectionContains{
+    width: 100%;
+    display: flex;
+}
+
+/* start */
+.chatSectionContainer{
+    width: 25%;
+    height: 60px;
+    cursor: pointer;
+    z-index: 10;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.chatPersonContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    overflow: hidden;
+}
+.chatPersonContainer .personImgContainer{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.chatPersonContainer .personImgContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.chatPersonContainer h4{
+    color: #d8d5d5;
+    font-weight: 500;
+}
+
+
+/* msgSectionContainer */
+.msgSectionContainer{
+    display: none;
+    width: 75%;
+    min-height: 80vh;
+    z-index: 100000000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom: 2px solid rgba(140, 0, 255, 0.5);
+}
+.visible .msgSectionContainer{
+    display: block;
+}
+.msgContainer{
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+.msgChat{
+    width: 100%;
+    height: 100vh;
+}
+.msgChatHeader{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #cd04f5;
+}
+.msgChatHeader .personMsgContainer{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.msgChatHeader .personMsgContainer .personImgMsgContainer{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #acacac;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.msgChatHeader .personMsgContainer .personImgMsgContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+.msgChatHeader .personMsgContainer h4{
+    color: #d8d5d5;
+    font-weight: 500;
+}
+
+/* message Path */
+.messagingSection{
+    width: 100%;
+    height: 73%;
+    overflow: hidden;
+}
+.messagingContainer{
+    width: 92%;
+    height: 100%;
+    margin: auto;
+}
+.senderContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.senderMsgContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.sender{
+    padding: 20px 0;
+}
+.sender p{
+    color: white;
+    margin-top: 20px;
+    text-align: right;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+/* Input message Box */
+.messageInputSections{
+    width: 100%;
+    height: 11.5%;
+}
+.messageInputSections .msg{
+    width: 100%;
+    height: 100%;
+    padding: 14px 0;
+}
+.messageInputSections .msg .msgBox{
+    position: relative;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #acacac;
+    padding: 10px 10px;
+    border-radius: 30px;
+}
+.messageInputSections .msg .msgBox textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-right: 15px;
+    padding: 5px 20px;
+    background-color: #acacac;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+.messageInputSections .msg .msgBox textarea:placeholder-shown{
+    color: #000;
+    font-weight: 900;
+}
+.messageInputSections .msg .msgBox .paperIcon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    background-color: #acacac;
+    border: 2px solid #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.messageInputSections .msg .msgBox .paperIcon i{
+    font-size: 18px;
+    cursor: pointer;
+}
